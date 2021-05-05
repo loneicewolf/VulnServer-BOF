@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-
+# Removed sys since I want to be able to easier maintain it in the future.
+# instead of passing IP and PORT, just use below IP=.. PRT=...
 import socket
 
 sh =  b""
